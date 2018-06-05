@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
-
+    <title>Kyber Network Documentation</title>
+    
+    <link href="images/favicon.ico" rel="icon" type="image/ico" />
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -201,7 +202,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -210,293 +211,646 @@
     </a>
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#overview" class="toc-h1 toc-link" data-title="overview">Overview</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#trust-and-security-model" class="toc-h2 toc-link" data-title="trust-and-security-model">Trust and security model</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#smart-contract-architecture" class="toc-h2 toc-link" data-title="smart-contract-architecture">Smart Contract Architecture</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#integration" class="toc-h1 toc-link" data-title="integration">Integration</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#rate-query" class="toc-h2 toc-link" data-title="rate-query">Rate query</a>
+                  </li>
+                  <li>
+                    <a href="#trade-execution" class="toc-h2 toc-link" data-title="trade-execution">Trade Execution</a>
+                  </li>
+                  <li>
+                    <a href="#user-eligibility" class="toc-h2 toc-link" data-title="user-eligibility">User Eligibility</a>
+                  </li>
+                  <li>
+                    <a href="#network-state" class="toc-h2 toc-link" data-title="network-state">Network State</a>
+                  </li>
+                  <li>
+                    <a href="#user-max-gas-price" class="toc-h2 toc-link" data-title="user-max-gas-price">User Max Gas Price</a>
+                  </li>
+                  <li>
+                    <a href="#current-deployment" class="toc-h2 toc-link" data-title="current-deployment">Current Deployment</a>
+                  </li>
+                  <li>
+                    <a href="#affiliate-program" class="toc-h2 toc-link" data-title="affiliate-program">Affiliate Program</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#reserves" class="toc-h1 toc-link" data-title="reserves">Reserves</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#step-1-talk-to-kyber" class="toc-h2 toc-link" data-title="step-1-talk-to-kyber">Step 1: Talk to Kyber</a>
+                  </li>
+                  <li>
+                    <a href="#step-2-design-your-strategy-algorithm" class="toc-h2 toc-link" data-title="step-2-design-your-strategy-algorithm">Step 2: Design your Strategy/Algorithm</a>
+                  </li>
+                  <li>
+                    <a href="#step-3-test-stage-and-deploy-your-contract" class="toc-h2 toc-link" data-title="step-3-test-stage-and-deploy-your-contract">Step 3: Test/stage and Deploy Your Contract</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tracker-api" class="toc-h1 toc-link" data-title="tracker-api">Tracker API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-list-of-convertible-pairs" class="toc-h2 toc-link" data-title="get-list-of-convertible-pairs">Get List of Convertible Pairs</a>
+                  </li>
+                  <li>
+                    <a href="#field-description" class="toc-h2 toc-link" data-title="field-description">Field Description</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#website-widgets" class="toc-h1 toc-link" data-title="website-widgets">Website widgets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#kybe-signin-widget" class="toc-h2 toc-link" data-title="kybe-signin-widget">Kybe Signin Widget</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#getting-help" class="toc-h1 toc-link" data-title="getting-help">Getting help</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#email" class="toc-h2 toc-link" data-title="email">Email</a>
+                  </li>
+                  <li>
+                    <a href="#telegram" class="toc-h2 toc-link" data-title="telegram">Telegram</a>
+                  </li>
+              </ul>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://home.kyber.network/'>Home</a></li>
+            <li><a href='https://kyber.network'>DEX</a></li>
+            <li><a href='https://github.com/kyberNetwork/'>GitHub</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the Kyber Network documentation! You can find our documentation for smart contracts and APIs here. You can visit our GitHub <a href="https://github.com/KyberNetwork">here</a>. </p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>Kyber Network functions as a decentralized Ethereum-based solution that is committed to advancing the interchangeability and fluidity of digital asset conversion.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>Our trustless system offers a convenient and secure platform that empowers users with flexibility and choice when it comes to token exchange and payment. With our system, users will be able to make or receive payments in the token of their choice seamlessly, without ever dealing with the hassle of deposits or registration. Trade requests and payments are executed instantly and securely at the best possible rate, free from the vulnerability threats and slow processing time that burden other existing exchanges.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>To help expand our network, we have made it so that our open-source technology can be easily integrated to facilitate cross-platform trading and payment, which will help unlock more token utility and adoption. The meteoric rise of cryptocurrency has ushered in multiple waves of new digital assets. The rising diversity of tokens begs for a Paypal-like structure to help blockchain transition from concept to real-world application – and we are confident that Kyber Network is the key to enabling the technology’s full potential.</p>
+<h1 id='overview'>Overview</h1>
+<p>Kyber Network’s smart contract allows users to send one type of token (e.g. GNT) and receive a different token in return (e.g. ETH) according to market conversion rates. This all happens in a single transaction so at no point does the contract hold users’ funds. A conversion between ETH and GNT is depicted in the diagram below.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*QxCDLMFF4atgC4d_DgN_-A.png" title="Exchange" alt="alt text" /></p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<p>The conversion is possible thanks to reserve contracts that hold inventories of tokens and provide conversion rates to Kyber Network. The inventory of every reserve, along with its price feed, is managed by a reserve manager, namely, a person or an off-chain automated system that queries market prices and buys/sells inventory from the open market.</p>
+
+<p>The user does not pay any fees. Platform fees are paid by the reserve that executes the exchange. The platform fees are eventually burned. In addition, some fees might be paid for the website/mobile application that directed the user to Kyber Network smart contract.</p>
+<h2 id='trust-and-security-model'>Trust and security model</h2>
+<p><strong>Who should the user trust?</strong> </p>
+
+<p>In general, the user need not trust Kyber Network with their funds. They can provide a minimal conversion rate, which guarantees that their exchange is either executed at this specified rate or at a better one, otherwise the entire transaction is reverted. While user funds are not at risk in such cases, they do lose some gas fees as dishonest behaviors of Kyber Network reserves (e.g. large, frequent changes in offered rates) could potentially increase gas fee losses for the user.</p>
+
+<p><strong>Who should Kyber Network trust?</strong></p>
+
+<p>At this point, for Kyber Network to be fully functional, there needs to be at least one reserve running at all times. Kyber Network already operates a reserve of its own, so one can safely assume smooth, uninterrupted operations. The network admin should trust (i.e. read) the code of <a href="https://github.com/KyberNetwork/smart-contracts/blob/master/contracts/KyberNetwork.sol"><code>KyberReserve.sol</code></a> and the listed ERC20 tokens.</p>
+
+<p><strong>Who should the reserve manager trust?</strong></p>
+
+<p>At this point, the reserves must trust the honest behavior of Kyber Network administrators. While reserve funds are not at risk, Kyber Network administrators have the ability to halt the reserve operations within the platform. In addition, the reserve manager could be affected by extreme market conditions like flash crashes or from sub-optimal inventory management (e.g. setting wrong prices or from large exposure to risky tokens).</p>
+<h2 id='smart-contract-architecture'>Smart Contract Architecture</h2>
+<p>Every contract in our system has three permission groups namely, <strong><em>admin</em></strong>, <strong><em>operators</em></strong>, and <strong><em>alerters</em></strong>. The admin account is unique (usually cold wallet) and handles infrequent, manual operations like listing new tokens in the exchange. The <strong><em>operator</em></strong> account is a hot wallet and is used for frequent updates like setting reserve rates and withdrawing funds from the reserve to certain destinations (e.g. when selling excess tokens in the open market). The <strong><em>alerter</em></strong> account is also a hot wallet and is used to alert the <strong><em>admin</em></strong> of consistencies in the system (e.g., strange conversion rates). In such cases, the reserve operation is halted and can be resumed only by the admin account.</p>
+
+<p>Conceptually, the two main components in the system are <code>KyberNetwork.sol</code> and <code>KyberReserve.sol</code> which together implement Kyber network and the reserve(s). However, additional auxiliary contracts are needed to create upgradable components that might require frequent updating, and also because solidity contract size is limited to 25 Kb.</p>
+<h1 id='integration'>Integration</h1>
+<p>Kyber Network’s technology is open source and may be freely integrated into your dapp/platform without any fees. This will grant your users access to our instantaneous token conversion and transfer service. The increased interchangeability of tokens not only improves your platform’s functionality, but also enhances your users’ experiences.</p>
+
+<p>This section describes how a third party wallet/exchange can perform an exchange deal with Kyber Network smart contract.</p>
+
+<p>A wallet/exchange service interacts with the contract below ways:</p>
+
+<ol>
+<li>Rate query: queries the offered price of, e.g., GNO to ETH conversion.</li>
+<li>Trade execution: e.g., convert X GNO to Y ETH.</li>
+<li>Checks if user is allowed to use the exchange services and the maximum amount he can trade.</li>
+<li>Checks the network state. Initially it might be down for maintenance in extreme cases.</li>
+<li>Checks user max gas price.</li>
+</ol>
+
+<p>We describe the api for each below:</p>
+<h2 id='rate-query'>Rate query</h2>
+<p>To query the conversion rate, one should call this function:</p>
+
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kd">function</span> <span class="nx">getExpectedRate</span><span class="p">(</span><span class="nx">ERC20</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">ERC20</span> <span class="nx">dest</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">srcQty</span><span class="p">)</span> <span class="kr">public</span> <span class="nx">view</span>
+        <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span> <span class="nx">expectedPrice</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">slippagePrice</span><span class="p">);</span>
 </code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<p>The function returns the expected and worse case conversion rate between source and dest tokens, where source and <code>dest</code> are 20 bytes addresses. Use address <code>0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</code> to denote Ether.</p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>For example, if user wants to sell GNO tokens in return to ETH, he should set <code>source = 0x6810e776880c02933d47db1b9fc05908e5386b96</code> and <code>dest = 0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</code>. In return to 1 GNO token he is expected to receive <code>expectedPrice / 10**18 ETH</code>, but in the worse case scenario he will get only <code>slippagePrice/10**18</code> ETH.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>If he wants to buy GNO with ETH, he should set <code>source = 0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</code>, and dest = 0x6810e776880c02933d47db1b9fc05908e5386b96.</p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>A return value of <code>0</code> indicates that an exchange from <code>source</code> to <code>dest</code> is currently not available. A value of <code>0</code> in the slippage price indicates that transaction might be reverted and not completed. We note that the worst case scenario is always for the transaction to be reverted due to either sudden change in rates or even inventory depletion, but these events are rare.</p>
+<h2 id='trade-execution'>Trade Execution</h2>
+<p>To make an exchange, one should call:</p>
+
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kd">function</span> <span class="nx">trade</span><span class="p">(</span>
+        <span class="nx">ERC20</span> <span class="nx">source</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">srcAmount</span><span class="p">,</span>
+        <span class="nx">ERC20</span> <span class="nx">dest</span><span class="p">,</span>
+        <span class="nx">address</span> <span class="nx">destAddress</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">maxDestAmount</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">minConversionRate</span><span class="p">,</span>
+        <span class="nx">address</span> <span class="nx">walletId</span>
+    <span class="p">)</span>
+</code></pre>
+<p>In general, this function convert <code>source</code> token to <code>dest</code> token and send it to destAddress. We now describe the function parameters with more details:</p>
+
+<ol>
+<li><p><code>source</code>: the address of the source token. Where <code>0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</code> stands for ETH. If the source token is ETH, then <code>msg.value</code> should be equal to srcAmount. I.e., the user must send the amount he wishes to convert when calling the function. Otherwise, the user must <code>approve</code> a sufficient amount (i.e., at least <code>srcAmount</code>) of tokens to Kyber Network contract address. This is done in a separate call to <code>approve</code> function of the relevant token.</p></li>
+<li><p><code>srcAmount</code>: amount of tokens to convert. If sending ETH must be equal to <code>msg.value</code>. Otherwise, must not be higher than user token allowance to Kyber Network contract address.</p></li>
+<li><p><code>dest</code>: the address of the destination source. Where <code>0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</code> stands for ETH.</p></li>
+<li><p><code>destAddress</code>: the address that will receive the converted token. For an exchange application, we recommend setting <code>destAddress = msg.sender</code>.</p></li>
+<li><p><code>maxDestAmount</code>: maximum destination amount. The actual converted amount will be the minimum of <code>srcAmount</code> and required amount to get <code>maxDestAmount</code> of <code>dest</code> tokens. For an exchange application, we recommend setting it to <code>MAX_UINT</code> (i.e., <code>2**256 - 1</code>).</p></li>
+<li><p><code>minConversionRate</code>: the minimal conversion rate. If the current rate is too high, then the transaction is reverted. For an exchange application, this value can be set according to the <code>priceSlippage</code> return value of <code>getExpectedRate</code>. However, in this case, the execution of the transaction is not guaranteed in case big changes in market price happens before the confirmation of the transaction. A value of <code>1</code> will execute the trade according to market price in the time of the transaction confirmation.</p></li>
+<li><p><code>walletId</code>: the id of the service provider. Should be determined along with Kyber Network. If you are not sure what to put here, just put <code>0</code>.</p></li>
+</ol>
+<h2 id='user-eligibility'>User Eligibility</h2>
+<p>Different users might have different maximal trade amount they can use. For example, in the future, users who did full KYC with kyber might be allowed to trade higher amounts. Also, during the initial pilot launch, only selected users (e.g., KGT holders) will be allowed to participate. For this purpose, every user (Ethereum account) has a cap of the maximal ETH he can trade in a single trade. A maximal amount of 0 ETH means the user cannot use the exchange at all (applicable mainly in the first pilot period). In this ropsten deployment, the default user limitation is 10 ETH.</p>
+
+<p>When converting ETH to token, the amount of ETH should not exceed the maximal amount. When converting token to ETH, the received ETH amount should not exceed the maximal amount. If the amount exceeds the maximal amount, the tx is reverted. As conversion rate is not fully known before tx is approved, when converting to ETH, it is recommended to make sure the expected amount does not exceed 95% of the maximal user limitation.</p>
+
+<p>To get user cap (max trade size) one should call:</p>
+
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kd">function</span> <span class="nx">getUserCapInWei</span><span class="p">(</span><span class="nx">address</span> <span class="nx">user</span><span class="p">)</span>
+</code></pre>
+<p>the return value is user ETH cap in wei units. In the current ropsten deployment, every address has a cap of 10 ETH.</p>
+<h2 id='network-state'>Network State</h2>
+<p>In extreme case, or when upgrading the contract the network might be disabled by the network admin and all trades are disabled. The status can be fetched by reading the public variable <code>enable</code>. Please note that in the non-ropsten deployment it is renamed to <code>enabled</code>.</p>
+<h2 id='user-max-gas-price'>User Max Gas Price</h2>
+<p>To prevent user front running, the contract limits the gas price user can have. If the user sends a transaction with a higher gas price the transaction is reverted. This limitation can be queried from the public variable <code>maxGasPrice</code>. A typical value would be 50000000000, which stands for 50 gwei.</p>
+<h2 id='current-deployment'>Current Deployment</h2>
+<p>The contract is currently deployed on Ethereum mainnet and Ropsten testnet. The mainnet contract address is <a href="https://etherscan.io/address/kybernetwork.eth"><code>kybernetwork.eth</code></a>.</p>
+
+<p>The ropsten addresses can be found <a href="https://github.com/KyberNetwork/smart-contracts/blob/ropsten/web3deployment/ropsten.json">here</a>. For wallets, the relevant addresses are those of Kyber Network contract and the token addresses. The kyber network contract address can be found <a href="https://github.com/KyberNetwork/smart-contracts/blob/ropsten/web3deployment/ropsten.json#L171">here</a>, while the token addresses are <a href="https://github.com/KyberNetwork/smart-contracts/blob/ropsten/web3deployment/ropsten.json#L2">here</a>.</p>
+
+<p>The contracts source code and abi are also available at etherscan.</p>
+<h2 id='affiliate-program'>Affiliate Program</h2>
+<p><strong>What is the Wallet Affiliate Program</strong></p>
+
+<p>Affiliate program allow wallets to participate in fee sharing on each trade that origintates from your app.</p>
+
+<p>To become a verified affiliate. Please submit your details to Hello@Kyber.Network and a Kyber Network representative will contact you shortly. </p>
+
+<p><strong>Case Study for Fee Sharing</strong></p>
+
+<p>User A has successfully concluded a transaction of value 1ETH.</p>
+
+<p>0.25% of the transaction value (1ETH) is to be paid by reserves in KNC.</p>
+
+<p>As of now, from the fee paid, 80% of it will be sent for burning, and the remaining 20% will be used for tax payment. </p>
+
+<p>In the case where a registered wallet affiliate is involved, 30% of the 0.25% fee will be given to the affiliate.</p>
+<h1 id='reserves'>Reserves</h1>
+<p>Kyber Reserves are liquidity providers that are central to enabling instantaneous transactions on our network. Any entity intending to monetize their reservoir of idle digital assets can operate as a Kyber reserve.</p>
+
+<p>This document decribes how reserves work and how a third party can setup a reserve with Kyber Network smart contract.</p>
+<h2 id='step-1-talk-to-kyber'>Step 1: Talk to Kyber</h2>
+<p>The first step of becoming a Reserve Manager is to <a href="mailto:support@kyber.network">start your converstaion</a> with the Kyber Network team. </p>
+
+<p>People who want to become Reserve Managers require KYC. KYC is done by the Kyber Network as it&#39;s the only network operator at the moment. There will be more network operators in the future. These network operators will be selected thourgh a decentralized governance structure. </p>
+<h2 id='step-2-design-your-strategy-algorithm'>Step 2: Design your Strategy/Algorithm</h2>
+<p>After talking with Kyber, a Reserve Manager will need to develop their own strategies to decide on token-to-token exchange rates and reserve size. At Kyber Network, we do not believe in one solution that fits all. This strategy could be executed by a person and/or a machine and could change over time.</p>
+
+<p>Here we will illustrate a standard architecture for an exchange and describe classical textbook solutions for each component in the architecture.</p>
+<h3 id='kyber-network-exchange-model'>Kyber Network Exchange Model</h3>
+<p>At Kyber Network, the exchange fixes a rate between two tokens and users can buy and sell tokens according to this rate. For example, an exchange rate of ETH/GNT 666.68 means that the exchange would buy 666.68 GNT in return to 1 ETH and vice versa (a small spread between sell and buy price is plausible). This exchange model, which is common in FOREX (e.g., USD/EUR exchange), guarantees that a user can always instantly execute an exchange, without the need to wait for a buyer.</p>
+
+<p>However, the reserve operator needs to ensure that there are sufficient ETH and GNT holdings in reserve in anticipation of the demand and supply of both tokens, in order to satisfy user requests and to evaluate the true market-price of ETH-GNT pair.</p>
+
+<p>More formally, a reserve operator will have to constantly decide on these aspects:</p>
+
+<ol>
+<li><p>Target portfolio — how much tokens of each type to hold</p></li>
+<li><p>Re-balancing technique — how to strive to target portfolio structure after trades are executed.</p></li>
+<li><p>Pricing technique — how to estimate the true market price of pairs of tokens.</p></li>
+</ol>
+
+<p>In the next sections, we describe each of the items in greater depth and survey basic standard strategies.</p>
+<h3 id='target-portfolio'>Target Portfolio</h3>
+<p>The target portfolio is the distribution of the holdings of the exchange operator. For example, if an exchange only trades ETH, GNT, and DGD, a possible target portfolio is 70% ETH, 22% GNT and 8% DGD. Alternatively, the portfolio can be also be represented with numbers of tokens of each kind, for example: 10,000 ETH, 200,000 GNT, and 128,000 DGD.</p>
+
+<p>Two main considerations should be taken into account when deciding on target portfolio:</p>
+
+<ol>
+<li><p>Subjective expectations on token value: if the operator predicts that current GNT token value is expected to rise (relatively to other tokens), then he should increase the relative weight of GNT in his target portfolio. A textbook strategy is to set target portfolio to the relative market cap of each of the tokens. I.e., if DGD market cap is 5% of the combined market cap of ETH, GNT, and DGD, then 5% of the target portfolio will be DGD.</p></li>
+<li><p>Expected trading volume: exchange should hold enough tokens to support daily trade volume for each token. A possible strategy is to hold only the minimal amount of tokens that are needed for daily trading, and hold the rest in Ether or other more stable currencies (crypto or fiat).</p></li>
+</ol>
+
+<p>The target portfolio could change over time according to operator preferences and personal experience. On the other hand, the actual portfolio, namely, the actual holdings of the exchange, are constantly changing after every trade. The role of the re-balancing component, which we will come to in the following section, is to make the actual portfolio as close as possible to the target portfolio.</p>
+<h3 id='re-balancing'>Re-balancing</h3>
+<p>Once a target portfolio <code>T</code> is fixed, the re-balancing component role is to buy and sell tokens, from and to other brokerage-firms (e.g., exchanges like Poloniex or Kraken) until the actual holdings are close enough to <code>T</code>. Three classical re-balancing strategies are:</p>
+
+<ol>
+<li><p>Auto-instant: a re-balance is made after every buy/sell operation. For example, if a user bought 500 GNT tokens from the exchange at the price of 1 ETH, the exchange operator will immediately use the 1 ETH to buy 500 GNT from other exchanges. By doing so, the exposure of the operator to price fluctuations is minimized, and this method is suitable for operators that wish to base their earnings mostly on buy/sell spreads.</p></li>
+<li><p>Time-spacing: a target of H hours is set for full re-balance. Small partial re-balances are done at every M minutes. This technique exposes the operator to more risk, but on average allows the exchange operator to buy and sell tokens from the market at better rates.</p></li>
+<li><p>Price-spacing: the portfolio re-balancing is done only when operator witnesses significant moves in token prices. For example, a re-balance operation for GNT is done only if GNT price goes up (or down) by 5% in comparison to its price in the last re-balance operation. This strategy is good if a reserve operator wants to perform the re-balancing act only when the prices are more favorable to its holdings. However, the downside is that the reserve could be over depleted/inflated if the market does not move in the owner’s favor.</p></li>
+</ol>
+
+<p>For all re-balancing strategies, the best-priced exchanges will be exhausted first, for all available liquidity, to ensure operator get the best price.</p>
+<h3 id='pricing'>Pricing</h3>
+<p>A reserve operator always aims to offer true market prices for buy and sell trades, up to some small spread in buy/sell rates. Indeed a lower rate would cause him loses in every trade, while a higher rate would make users to prefer other exchanges.</p>
+
+<p>At Kyber Network we do not believe that market price can be determined by a fixed formula. Instead, a (human) operator should decide on an automated policy for determining prices and update his policy over time according to observed performances and behaviors of token pairs. Below we survey the two most basic techniques for determining market price:</p>
+
+<ol>
+<li><p>Quote-price: the operator scan all market prices offered by brokerage-firms and base its price as the average (or median) of all prices. A simple average (or median) is commonly used in FOREX by non-financial savvy operators. However, in the crypto world, where liquidity is much lower, an exchange that offers low liquidity could dramatically disrupt prices.</p></li>
+<li><p>Liquidity-weighted-quote-price: To overcome bias from low liquidity exchanges, one could use the more accurate method of liquidity-weighted-price. Here, a weighted average of the price is taken, where the weight of an exchange corresponds to its liquidity. For example, if in exchange A the ETH/GNT rate is 600 with 1000 tokens up for sale, and in exchange B the rate is 700 with 2000 tokens for sale, then the liquidity-weighted-price is 666.667.</p></li>
+</ol>
+
+<p>When the market price has been decided, the operator determines the buy/sell spread. The spread is dynamic and could vary over time, and should take into account these considerations:</p>
+
+<ol>
+<li><p>Kyber Network maximal spread — To stay competitive, Kyber Network will dictate spread upper bounds for exchange operators.</p></li>
+<li><p>Liquidity of token — For competitiveness purposes, liquid tokens will have lower spread, while illiquid tokens will have a higher spread.</p></li>
+<li><p>Target portfolio — If the re-balancing algorithm aims to increase the holdings of the token, then a lower spread is set for sell orders. Conversely, if the quantity is to be reduced, then the lower spread is set for buy orders.</p></li>
+</ol>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+We gave an introduction for the basic architecture of a crypto exchange. While the components are similar to those of FOREX exchange, the dynamic nature of crypto markets makes it more challenging to decide on the optimal parameters. These parameters should be adjusted by the operator according to his point of view and over time according to the observed performance of the exchange.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h3 id='kybernetwork-sol'>KyberNetwork.sol</h3>
+<p>The user has two endpoints in the contract. The first endpoint is to query conversion rate.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kd">function</span> <span class="nx">getExpectedRate</span><span class="p">(</span><span class="nx">ERC20</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">ERC20</span> <span class="nx">dest</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">srcQuantity</span><span class="p">)</span>
+        <span class="kr">public</span> <span class="nx">view</span>
+        <span class="nx">returns</span> <span class="p">(</span><span class="nx">uint</span> <span class="nx">expectedRate</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">slippageRate</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p>which returns to the user the conversion rate, and an expected worst-case conversion rate (i.e. price update could happen before the user transaction is confirmed). It is recommended that the user will use <code>slippagePrice</code> as <code>minConversionRate</code> (in the <code>trade</code> function). The logic for <code>slippagePrice</code> depends on many parameters like average exchange volume and token price volatility. Hence, the logic is implemented in an upgradable contract (<code>ExpectedRate.sol</code>). The logic can be heavy as this is typically called off chain by an eth_call RPC.</p>
+
+<p>The user endpoint to performs an exchange with the function</p>
+
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kd">function</span> <span class="nx">trade</span><span class="p">(</span>
+        <span class="nx">ERC20</span> <span class="nx">source</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">srcAmount</span><span class="p">,</span>
+        <span class="nx">ERC20</span> <span class="nx">dest</span><span class="p">,</span>
+        <span class="nx">address</span> <span class="nx">destAddress</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">maxDestAmount</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">minConversionRate</span><span class="p">,</span>
+        <span class="nx">address</span> <span class="nx">walletId</span>
+ <span class="p">)</span>
+</code></pre>
+<p>which converts source token into dest token and sends it to the destination address (as a convention a special constant 0xeeee…eee denotes ETH). The conversion is done at a rate that is at least min conversion rate. Some fees are provided to the wallet id address, provided it is part of Kyber Network’s affiliation program.</p>
+
+<p>When a trade is executed the contract queries the rates from all of the reserves (i.e., calls <code>KyberReserve.sol</code>). From the conversion rate, the ETH amount of the exchange is estimated (at this point, the system supports only ETH to/from token conversion). With the ETH amount, the contract checks if the exchange amount extends user cap. User cap might be set according to multiple criteria, e.g, users who did KYC will get a higher cap. This logic could change over time, and is thus implemented in an auxiliary upgradable contract called <code>KyberWhiteList.sol</code>.</p>
+
+<p>After user eligibility is determined, the network moves user funds to the reserve with the best rate, and in return gets the destination token from the reserve and sends it to the destination address. After the exchange, the contract burns the platform fees and transfers some of the fees to the affiliated wallet. This is done by calling the upgradable contract <code>FeeBurner.sol</code>. In the current implementation, to reduce user gas costs, the fees are not burned immediately, instead we maintain a counter that records the amount to be burned. The actual burn is done in a different function call, which can be called by anyone.</p>
+
+<p>The exchange flow is depicted in the figure below:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*SVLUBhQgMIR7aRl7." title="Exchange Sequence" alt="alt text" /></p>
+<h3 id='kyberreserve-sol'>KyberReserve.sol</h3>
+<p>The reserve’s role is to execute exchanges and provide rates for Kyber Network. The contract has no direct interaction with the end users (the only interaction with them is via the network platform). Its main interaction is with the reserve operator who manages the token inventory and feeds exchange rates every few minutes. The contract has two auxiliary contracts, <code>Pricing.sol</code> and <code>SanityPricing.sol</code>. The first contract provides logic to maintain simple on-chain adjustment to the prices and an optimized cheap (w.r.t gas consumption) interface to enter rate feeds. The second contract provides sanity price feeds. If there are large inconsistencies between the sanity prices and the accurate prices, then user exchanges are disabled. The sanity module protects both parties from bugs in the accurate pricing logic and both from hacks into the accurate pricing system. Having it in a different contract gives rise to two different operators, each having access to only one of the contracts. Thus, the sanity pricing module mitigates the damage of a potential hack to the reserve operator account.</p>
+
+<p>For on-chain pricing adjustments, rates are determined according to market rate and according to the inventory state. For example, if a reserve manager aims towards having holdings of 1000 OMG (some of which could be outside the contract), but his current holdings are 900 OMG, then he would offer additional OMGs at a rate that is worse than the market rate. Most of this logic is handled off-chain by the reserve manager system (which runs on a server) who feeds the relevant data every few minutes. However, this system might not be able to respond in real time, as several transactions can be processed in a single block. Hence, the pricing module (via <code>VolumeImbalanceRecorde.sol</code>) records the inventory imbalance that was generated since the last price update in the current block. According to the recent imbalance, small adjustments to the price are made in the contract. The contract stops serving requests if the imbalance is too big, waiting until the reserve manager sets new price feeds which take into account the current imbalance. This serves two purposes, the first is to give the reserve manager a chance to respond before the imbalance becomes too big. The second is to avoid wild speculation of shifts in the market price as a result of sudden big imbalances. In this case, the contract bounds the maximal imbalance between price updates and gives the reserve manager time to respond. Another consideration in pricing is the required quantity. The market price of 100 tokens is usually better than the market price of 1000 tokens, since low quantity of tokens can be more easily purchased in the exchanges. For this purpose, the contract supports a step function that offers different rates according to different required quantities.</p>
+
+<p>The exchange process, from <code>KyberReserve.sol</code> point of view, is depicted in the figure below:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/0*oOe4SfQ2gXjWk3WS." title="Exchange Sequence - Reserve Contract View" alt="alt text" /></p>
+<h3 id='technical-details'>Technical Details</h3>
+<ol>
+<li><p>Rate definition and resolution: A rate is defined between source token and dest token. The amount of dest quantity is determined according to: </p>
+
+<p><code>dest_amount = src_amount * rate / PRECISION</code></p>
+
+<p>where <code>PRECISION</code> is 10¹⁸. For example, if the rate is 2*10¹⁸, then for every source token, two dest tokens are given. It is important to note that this formula holds for a complete token. For basic token units, a.k.a, token wei (twei), the decimals of every token should be taken into account. For example, if source token decimal is 8, and the destination is 18, then for every 10⁸ twei of the source, 2*10¹⁸ twei are given.</p></li>
+<li><p>Trust between <code>KyberNetwork.sol</code> and <code>KyberReserve.sol</code>. At this point, every reserve manager will have to use <code>KyberReserve.sol</code> smart contract. However, even if the <code>KyberReserve.sol</code> code is not trustable, the worse that could happen from the user’s perspective is a loss of gas fees. On the other hand, the reserve must trust/understand <code>KyberNetwork.sol</code> code, as it feeds it the conversion rate. This will save an additional calculation of rates — a gas-consuming process.</p></li>
+<li><p>Transferring tokens between <code>KyberNetwork.sol</code> and <code>KyberReserve.sol</code>: To save gas fees, <code>KyberNetwork.sol</code> gives an infinite allowance of tokens to the <code>KyberReserve.sol</code> contract. This is reasonable as the network balance should always be 0. Hence, when a user sends token, the network simply passes it to its possession (using <code>transferFrom</code>), and the chosen reserve can just take it from the network with another call to <code>transferFrom</code>. In the converse direction, the reserve simply sends tokens to the network without the <code>approve/transferFrom</code> sequence, and network sends them to the user. This is acceptable as the network balance is 0; hence, if the reserve did not send the tokens, the operation will fail.</p></li>
+<li><p>Efficient price feeds: as price updates are expected to happen every few minutes, it is imperative that prices are represented in a compact data structure (on-chain storage operations are expensive). For this purpose, we store rates in the following form: a base price consists of 256 bits, and an 8 bits compact price that represents the delta in 0.1% units from the base price. We note that the 8 bits stand for the signed integer, and thus the price difference can be in the order of +-12.8%. When the market price deviates in greater amounts, the base price is also updated.</p></li>
+<li><p>Volume recording algorithm: to reduce gas costs we aim to make only one storage write to maintain the imbalance since the last price update. Since a price update that was broadcast at block 1000 could only have been confirmed at block 1002, it is necessary to take into account the imbalance that was generated during blocks 1000 and 1001, and potentially a part of block 1002. For this purpose, we keep a window of size 5 (where 5 blocks serve as an upper bound for transaction confirmation time). To prevent the need for a counter update (which is a storage operation), whenever imbalance is fetched, we read all the 5 units and deduce the imbalance from that. When imbalance is added, we simply record it in <code>current_block_number % 5</code></p></li>
+<li><p>User gas price limit: to mitigate flash crashes or sudden price changes, we limit the user exchange gas price. This allows the reserve operator to send price updates with higher gas prices and make sure user exchange is done at the market price.</p></li>
+<li><p>Bytes tricks: We wanted to maintain a structure with several fields that consume in total 32 bytes in two locations. However, to our surprise, when looking at the generated assembly code, the solidity compiler produced a code that was using multiple <code>SSTORE</code> op codes to update the structure content. Hence, we were forced to maintain a 32 bytes integral type (<code>bytes32</code> our <code>uint256</code>) and extract the needed bytes with byte operations.</p></li>
+<li><p>Breaking contract functionality into multiple contracts: we were forced to split the <code>Pricing.sol</code> contract from <code>KyberReserve.sol</code> since the code size was too big to deploy in a single transaction. For the same reason, we also had to split <code>FeeBurner.sol</code> from <code>KyberNetwork.sol</code> contract. Splitting <code>FeeBurner.sol</code> also allows the reserve manager to mitigate bugs in the fee calculation. The reserve manager can limit the KNC allowance it gives, and thus bound the total amount of KNC that can be burned. On the other hand, this could give rise to reserve managers avoiding payment of fees (simply by resetting the allowance). We have decided that this risk is tolerable and manageable at this point in time.</p></li>
+<li><p>The following contracts are likely to be updated frequently in the first months of Kyber Network exchange operation: (i) <code>ExpectedRate.sol</code> (ii) <code>KyberWhiteList.sol</code> (iii) <code>SanityRates.sol</code></p></li>
+</ol>
+<h2 id='step-3-test-stage-and-deploy-your-contract'>Step 3: Test/stage and Deploy Your Contract</h2>
+<p>Once you have your strategies ready, you can test your algoritms on the Ethereum Rospten Testnet. Currenly, if you provide us a Rospten account you control, we can deploy relevant contracts for you and provide you a reserve address.</p>
+
+<p>You can use (web3)[https://github.com/ethereum/web3.js/] to programmatically interact with the Kyber contract address. </p>
+
+<p>A few steps to test your reserves on the Rospten Testnet:</p>
+
+<p><em>1. Set an exchange rate for your reserves.</em></p>
+
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kd">function</span> <span class="nx">setBaseRate</span><span class="p">(</span>
+        <span class="nx">ERC20</span><span class="p">[]</span> <span class="nx">tokens</span><span class="p">,</span>
+        <span class="nx">uint</span><span class="p">[]</span> <span class="nx">baseBuy</span><span class="p">,</span>
+        <span class="nx">uint</span><span class="p">[]</span> <span class="nx">baseSell</span><span class="p">,</span>
+        <span class="nx">bytes14</span><span class="p">[]</span> <span class="nx">buy</span><span class="p">,</span>
+        <span class="nx">bytes14</span><span class="p">[]</span> <span class="nx">sell</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">blockNumber</span><span class="p">,</span>
+        <span class="nx">uint</span><span class="p">[]</span> <span class="nx">indices</span>
+    <span class="p">)</span>
+</code></pre>
+<p><em>2. Send tokens to your reserves to create a liquidity supply.</em></p>
+
+<p><em>3. Give allowance to Kyber&#39;s fee contract.</em></p>
+
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">function</span> <span class="nx">approve</span><span class="p">(</span><span class="nx">address</span> <span class="nx">_spender</span><span class="p">,</span> <span class="nx">uint</span> <span class="nx">_value</span><span class="p">)</span>
+</code></pre>
+<p><code>_spender</code> is Kyber Network&#39;s fee contract adddress. The address is <code>0x89B5c470559b80e541E53eF78244edD112c7C58A</code> on Rospten Testnet.</p>
+
+<p><code>_value</code> should cover 0.25% of your expected volumn.</p>
+
+<p><em>4. Get authorized by a network operator. Kyber Network is the only operator at the moment.</em></p>
+
+<p><em>5. Test exchange with your reserve.</em></p>
+
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code>    <span class="kd">function</span> <span class="nx">trade</span><span class="p">(</span>
+        <span class="nx">ERC20</span> <span class="nx">src</span><span class="p">,</span> 
+        <span class="nx">uint</span> <span class="nx">srcAmount</span><span class="p">,</span> 
+        <span class="nx">ERC20</span> <span class="nx">dest</span><span class="p">,</span>
+        <span class="nx">address</span> <span class="nx">destAddress</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">maxDestAmount</span><span class="p">,</span>
+        <span class="nx">uint</span> <span class="nx">minConversionRate</span><span class="p">,</span>
+        <span class="nx">address</span> <span class="nx">walletId</span>
+    <span class="p">)</span>
+</code></pre><h1 id='tracker-api'>Tracker API</h1>
+<p>Kyber tracker API allows you to track information from trading pairs available on Kyber Network, such as the current exchange rate of a token.</p>
+<h2 id='get-list-of-convertible-pairs'>Get List of Convertible Pairs</h2>
+<p><strong>URL</strong>: https://tracker.kyber.network/api/tokens/pairs</p>
+
+<p><strong>Format</strong>: a JSON document of all Kyber Network’ supported pairs.</p>
+
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="w">    </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"ETH_OMG"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OMG"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OmiseGO"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contractAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xd26114cd6ee289accf82350c8d8487fedb8a0c07"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"decimals"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currentPrice"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0225310175897248</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lastPrice"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0221079406797047</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lastTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1522654595</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"baseVolume"</span><span class="p">:</span><span class="w"> </span><span class="mf">6.9014983</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quoteVolume"</span><span class="p">:</span><span class="w"> </span><span class="mf">319.9424158830901</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+     </span><span class="err">…</span><span class="w"> </span><span class="err">(other</span><span class="w"> </span><span class="err">pairs</span><span class="w"> </span><span class="err">go</span><span class="w"> </span><span class="err">here)</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='field-description'>Field Description</h2>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
+<th>#</th>
+<th>Field Name</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>1</td>
+<td>Pair name (ETH_OMG)</td>
+<td>Pair name. In the example above, ETH is called “base token” and OMG “quote token”.</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>2</td>
+<td>symbol, name</td>
+<td>Symbol and name of the quote token.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>contractAddress</td>
+<td>Contract address of the quote token.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>decimals</td>
+<td>Number of decimals of the quote token.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>currentPrice</td>
+<td>Current exchange rate between the pair on Kyber Network, as displayed on https://kyber.network/.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>lastPrice</td>
+<td>Exchange rate of the last transaction between the pair on Kyber Network.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>lastTimestamp</td>
+<td>Timestamp of the last transaction between the pair on Kyber Network (Unix timestamp format).</td>
+</tr>
+<tr>
+<td>8</td>
+<td>baseVolume</td>
+<td>24h volume of trades between the pair, in base token (i.e. ETH).</td>
+</tr>
+<tr>
+<td>9</td>
+<td>quoteVolume</td>
+<td>24h volume of trades between the pair, in quote token (i.e. OMG).</td>
 </tr>
 </tbody></table>
+<h1 id='website-widgets'>Website widgets</h1><h2 id='kybe-signin-widget'>Kybe Signin Widget</h2>
+<p>The Kyber Signin Widget conforms to the Auth 2.0 specs, so you could use it with any of your existing auth2.0-support libraries/frameworks.</p>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<aside class="notice">
+Note: This widget is under development, and provided for partners for early testing. For testing purpose, please use https://kyber.mangcut.vn as [kyber_website]
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>Before you start, contact Kyber Support to get:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<ul>
+<li>an <em>developer</em> account</li>
+<li>an <em>user</em> account for testing purpose</li>
+</ul>
+<h3 id='1-register-your-app'>1. Register your app</h3>
+<p>Sign-in <em>[kyber_website]/oauth/applications/</em> with your developer account and create an app. </p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<p>Enter these inputs:</p>
+
+<ul>
+<li><strong>Name</strong>: short name of your app</li>
+<li><strong>Icon</strong>: png or jpg square icon</li>
+<li><strong>Callback URIs</strong>: Could provide multiple URIs. Must be HTTPS (could use ngrok or localtunel to create https urls for testing)</li>
+<li><strong>Scope</strong>: For now, please leave blank</li>
+</ul>
+
+<p>After registration, save your <strong>app ID</strong> and <strong>app secret</strong> for later use.</p>
+
+<p><strong>app ID</strong> is considered public and could be used in Javascript for example. <strong>app secret</strong> must be kept secret and only used at server-side.</p>
+<h3 id='2-add-kyber-signin-widget-to-your-site'>2. Add Kyber Signin Widget to your site</h3>
+<p><code>&lt;a href=“see bellow”&gt;Sign-in with Kyber&lt;/a&gt;</code></p>
+
+<p>Sample button style: <a href="https://codepen.io/thith/full/qYQOpX">https://codepen.io/thith/full/qYQOpX</a></p>
+
+<p>The <code>href</code> format:</p>
+
+<p><em>[kyber_website]</em>/oauth/authorize?client_id=<strong>APP_ID</strong>&amp;redirect_uri=<strong>CALLBACK_URI</strong>&amp;response_type=code&amp;state=STATE</p>
+
+<p><strong>client_id</strong> must be your app’s registered app id.</p>
+
+<p><strong>redirect_uri</strong> must be one of your app’s registered callback URIs.</p>
+
+<p><strong>request_type</strong> should be “code”, meaning that you request an <code>AUTH_CODE</code>.</p>
+
+<p><strong>state</strong>: anything of your choice. If you provide one, this param will be included as is when calling your callback</p>
+
+<p>User will be asked to sign-in with Kyber user account if he/she not already did so. Please use the provided user account to sign-in.</p>
+
+<p><img src="http://gdurl.com/r5iq" title="Widget" alt="alt text" /></p>
+<h3 id='3-implement-server-side-callback-logic'>3. Implement server-side callback logic</h3>
+<p>Kyber will call your callback uri when user either denies or authorizes your app’s request to access his/her Kyber account.</p>
+
+<p>For example, let’s assume your callback URI is  <code>https://example.com/callback</code>.</p>
+
+<p>If user denies, Kyber server will send a GET to <code>https://example.com/callback?error=access_denied&amp;error_description=The+resource+owner+or+authorization+server+denied+the+request</code>.</p>
+
+<p>If user authorizes, Kyber server will send a GET request to <code>https://example.com/callback?code=AUTH_CODE&amp;state=YOUR_PROVIDED_STATE</code>.</p>
+
+<p>You should check <code>YOUR_PROVIDED_STATE</code> is the same as the one you provided before continue.</p>
+
+<p>You then use the <code>AUTH_CODE</code> provided to query our site for an <code>ACCESS_TOKEN</code>.</p>
+
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code>    <span class="nx">POST</span> <span class="p">[</span><span class="nx">kyber</span><span class="o">-</span><span class="nx">website</span><span class="p">]</span><span class="o">/</span><span class="nx">oauth</span><span class="o">/</span><span class="nx">token</span>
+        <span class="nx">grant_type</span><span class="o">=</span><span class="nx">authorization_code</span><span class="o">&amp;</span>
+        <span class="nx">code</span><span class="o">=</span><span class="nx">AUTH_CODE</span><span class="o">&amp;</span>
+        <span class="nx">redirect_uri</span><span class="o">=</span><span class="nx">REDIRECT_URI</span><span class="o">&amp;</span>
+        <span class="nx">client_id</span><span class="o">=</span><span class="nx">APP_ID</span><span class="o">&amp;</span>
+        <span class="nx">client_secret</span><span class="o">=</span><span class="nx">APP_SECRET</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<p>Again, to keep <code>APP_SECRET</code> private, this code must be done at server-side. <code>REDIRECT_URI</code> must be one you previously used to get the <code>AUTH_CODE</code>.</p>
+
+<p>The server will replies with an access token and expiration time (in seconds):</p>
+
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="w">    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACCESS_TOKEN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxx"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<p>or if there is an error:</p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="w">    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"invalid_request"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='4-call-kyber-api'>4. Call Kyber API</h3>
+<p>With <code>ACCESS_TOKEN</code>, you can call Kyber Account APIs using one of these 2 methods:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<ul>
+<li>Add request header <code>Authorization: Bearer ACCESS_TOKEN</code> (recommended)</li>
+<li>Include a<code>ccess_token=ACCESS_TOKEN</code> as a GET or POST parameter</li>
+</ul>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<p><strong>Currently supported APIs</strong></p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<p><strong>4.1 Get user info</strong></p>
+
+<p><strong>What it does</strong>: Get current user info.
+<strong>Endpoint</strong>: [kyber_website]/api/user_info</p>
+
+<p>It would returns something like this:</p>
+
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="w">    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User Display Name"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"contact_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"demo@gmail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"kyc_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"registered_addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"0x…."</span><span class="p">,</span><span class="w"> </span><span class="s2">"0x…"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0x…"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><code>contact_type</code> should be <code>email</code> or <code>telegram</code>.  For Telegram user, <code>contact _id</code> is his/her telegram ID (the number, not the @username). </p>
+
+<p>Possible <code>kyc_status</code> values: <code>pending</code>, <code>approved</code>, <code>none</code>.</p>
+
+<p>If user not yet submitted KYC, or his/her KYC was rejected, <code>none</code> is returned.</p>
+
+<p>One user could have up to 3 addresses. If no address registered, an empty array is returned.</p>
+
+<p>If <code>ACCESS_TOKEN</code> is invalid, HTTP status code <code>401</code> is returned. In that case, it is likely that the token has expired. You should use the <code>refresh token</code> provided to renew the token (see (https://auth0.com/learn/refresh-tokens/)[https://auth0.com/learn/refresh-tokens].</p>
+
+<p>For other errors, it will return:</p>
+
+<div class="center-column"></div>
+<pre class="highlight json tab-json"><code><span class="w">    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"some reason"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='5-application-access-apis'>5. Application-access APIs</h3>
+<p>Application-access APIs are APIs designed for application, and not bound to a specific user. To call application-access API, you need to first obtain an <em>application token</em> instead of <em>user token</em>.</p>
+
+<div class="center-column"></div>
+<pre class="highlight javascript tab-javascript"><code>    <span class="nx">POST</span> <span class="p">[</span><span class="nx">kyber</span><span class="o">-</span><span class="nx">website</span><span class="p">]</span><span class="o">/</span><span class="nx">oauth</span><span class="o">/</span><span class="nx">token</span>
+        <span class="nx">grant_type</span><span class="o">=</span><span class="nx">client_credentials</span><span class="o">&amp;</span>
+        <span class="nx">client_id</span><span class="o">=</span><span class="nx">APP_ID</span><span class="o">&amp;</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<p>Possible returned values are the same as when getting user token mentioned in section #3.</p>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>Use the returned application token to call application-access APIs.</p>
 
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request sucks.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
+<p><strong>Currently supported application-access APIs</strong></p>
+
+<p><strong>5.1 Get authorized user list</strong></p>
+
+<p><strong>What it does</strong>: Get an array of all Kyber users who authorized your app. Users who had authorized but later revoked will not be included.</p>
+
+<p><strong>Endpoint</strong>: [kyber_website]/api/authorized_users</p>
+
+<p><strong>Input</strong>:</p>
+
+<ul>
+<li><code>uid</code> (optional, used for filtering results)</li>
+<li><code>kyc_status</code> (optional, used for filtering results)</li>
+</ul>
+
+<p><strong>Return</strong>: An array of user info object.</p>
+
+<p>See 4.1 for more detailed remarks about input and return values.</p>
+<h3 id='6-further-info'>6. Further Info</h3>
+<p>For more information on auth 2.0, please refer to https://aaronparecki.com/oauth-2-simplified/</p>
+<h1 id='getting-help'>Getting help</h1><h2 id='email'>Email</h2>
+<p>You can reach us by our email at <a href="mailto:support@kyber.network">support@kyber.network</a></p>
+<h2 id='telegram'>Telegram</h2>
+<p>You can also join our telegram group at <a href="https://t.me/kybernetwork">https://t.me/kybernetwork</a></p>
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
       </div>
     </div>
   </body>
