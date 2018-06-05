@@ -153,7 +153,8 @@ html, body {
 
   // This is the currently selected ToC entry
   .toc-link.active {
-    background-color: $nav-active-bg;
+    background-color: #358f8d;
+    /* background-color: $nav-active-bg;*/
     color: $nav-active-text;
   }
 
@@ -253,7 +254,6 @@ html, body {
   z-index: 10;
   background-color: $main-bg;
   min-height: 100%;
-
   padding-bottom: 1px; // prevent margin overflow
 
   // The dark box is what gives the code samples their dark background.
@@ -335,6 +335,27 @@ html, body {
     @extend %left-col;
   }
 
+// Force code (<pre>) into the center column
+.center-column {
+  float: left !important;
+  background-color: #f0f0f0 !important;
+  color: black !important;
+  clear: none !important;
+  margin-right: $examples-width !important;
+  width: 100% !important;     // May need to adjust this
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+// Add colors/hilights
+.center-column + pre {    
+  position: static;
+  float: none;
+  clear: none;
+  margin-right: $examples-width !important;
+  width: 100% !important; 
+  left: 0;
+}
+
   &>ul, &>ol {
     padding-left: $main-padding + 15px;
   }
@@ -351,9 +372,13 @@ html, body {
     padding-bottom: 0.5em;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
+    background-color: #59af84;
+    color: #fff
+    /* 
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    background-color: #fdfdfd;
+    background-color: #fdfdfd; 
+    */
   }
 
   h1:first-child, div:first-child + h1 {
